@@ -50,4 +50,11 @@ public class AddProductToCartTest extends BaseTest{
     }
 
 
+    @Test
+    @Order(5)
+    public void IncreaseProduct(){
+        cartPage.increaseItem();
+
+        Assertions.assertTrue(cartPage.isRefreshingTextValid(), "should visible sepetiniz guncelleniyor.");
+    }
 }
